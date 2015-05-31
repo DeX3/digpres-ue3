@@ -6,8 +6,10 @@ import net.minidev.json.JSONObject;
 import org.bson.Document;
 
 import com.mongodb.MongoClient;
+import com.mongodb.client.MapReduceIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.util.JSON;
 
 public class MongoHelper {
 	
@@ -35,6 +37,25 @@ public class MongoHelper {
 		mongo.close();
 
 		return i;
+	}
+	
+	public static String mapReduce(
+		String host,
+		int port, 
+		String database,
+		String collection,
+		String map,
+		String reduce
+	) {
+		MongoClient mongo = new MongoClient( host, port );
+		MongoDatabase db = mongo.getDatabase( database );
+		MongoCollection<Document> coll = db.getCollection( collection );
+		
+		MapReduceIterable<Document> i = coll.mapReduce(map, reduce);
+		String ret = JSON.serialize(i);
+		mongo.close();
+		
+		return ret;
 	}
 
 }
