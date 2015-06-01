@@ -6,12 +6,24 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
+import java.util.Map;
 
 import javax.xml.bind.DatatypeConverter;
 
 public class HTTPHelper {
 	
 	public static String get(
+        String uri,
+        String username,
+        String password
+    ) throws IOException {
+		
+	    HTTPResponse resp = HTTPHelper.getFull( uri, username, password );
+	    return resp.getBody();
+	}
+
+	public static HTTPResponse getFull(
         String uri,
         String username,
         String password
@@ -37,7 +49,33 @@ public class HTTPHelper {
 	      response.append('\r');
 	    }
 	    
-	    return response.toString();
+	    return new HTTPResponse(
+	    	response.toString(),
+	    	conn.getHeaderFields()
+	    );
+	}
+	
+	public static class HTTPResponse {
+		
+		private String body;
+		private Map<String, List<String>> headers;
+		
+		public HTTPResponse( String body, Map<String, List<String>> headers ) {
+			this.body = body;
+			this.headers = headers;
+		}
+
+		public Map<String, List<String>> getHeaders() {
+			return headers;
+		}
+
+		public String getBody() {
+			return body;
+		}
+
+		public void setBody(String body) {
+			this.body = body;
+		}
 	}
 
 }

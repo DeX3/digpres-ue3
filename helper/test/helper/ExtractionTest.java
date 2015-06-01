@@ -21,5 +21,20 @@ public class ExtractionTest {
             System.out.println( repo );
 		}
 	}
+	
+	@Test
+	public void testConcat() {
+		
+		String array1 = "[ { \"id\": 1234, \"name\": \"asdf\", \"foo\": true } ]";
+		String array2 = "[ { \"id\": 4711, \"name\": \"qwer\", \"foo\": false } ]";
+		
+		JSONArray arr1 = JSONHelper.parseArray( array1 );
+		JSONArray arr2 = JSONHelper.parseArray( array2 );
+		
+		arr1.addAll( arr2 );
+		
+		int max = Math.min(1, arr1.size());
+		System.out.println( arr1.subList(0,0).toString() );
+	}
 
 }
