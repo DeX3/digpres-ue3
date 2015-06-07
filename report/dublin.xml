@@ -6,7 +6,7 @@ xmlns:dc="http://purl.org/dc/elements/1.1/"
 xmlns:dcterms="http://purl.org/dc/terms/">
 <dc:title>GitHub Repositories</dc:title>
 <dc:creator>Roman Decker</dc:creator>
-<dc:creator>Sebastian Störchle</dc:creator>
+<dc:creator>Sebastian Stoerchle</dc:creator>
 <dc:subject>GitHub repositories</dc:subject>
 <dc:description>An export of the first 1000 repositories as returned by https://api.github.com/repositories. Not all properties are present however, some have been stripped.</dc:description>
 <dc:publisher>https://github.com</dc:publisher>
