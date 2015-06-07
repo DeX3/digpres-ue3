@@ -17,3 +17,96 @@ connected to: 127.0.0.1
 exported 1000 records
 \end{lstlisting}
 
+\subsection{Dublin Core}\label{sec:dublin}
+
+The idea from Dublin Core is the standardize the metadata for physical resources
+and web resources. In the Appendix we have a example for the Dublin Core Scheme
+for our solution. In our opinion it is a great scheme to compare dataset and get
+information but it is not really applicable for every dataset. Our dataset is
+one example, where we think it is not really applicable and where the scheme can
+not show their strenght, because the metadata for every dataset in the future is
+most likely the same except the date. 
+
+\subsection{Preservation Metadata: Implementation Strategies (PREMIS)}\label{sec:premis}
+
+
+\subsubsection{Most relevant metadata properties for our
+dataset}\label{sec:propertielist}
+
+\paragraph{title}
+The title of the dataset.
+\paragraph{description}
+The description of the dataset.
+\paragraph{subject}
+The subject of the dataset.
+\paragraph{date created}
+The date when the dataset was created.
+\paragraph{creator}
+The person, who created the dataset.
+\paragraph{publisher}
+The publihser of the dataset.
+\paragraph{format}
+The format of the dataset.
+\paragraph{size of file}
+The size of the dataset.
+\paragraph{number of repositories}
+The number of repositories which were evaluated in this dataset.
+\paragraph{rightsholder}
+The rightsholder of the dataset.
+\paragraph{repo-hosting service}
+The repositories-hosting service of the dataset.
+\paragraph{workflow version}
+The workflow-version of the dataset.
+\paragraph{identifier}
+The identifier of the dataset.
+\paragraph{language}
+The language of the dataset.
+\paragraph{provenace}
+The provenace of the dataset.
+
+\subsubsection{Description and dissusion about metadata properties}\label{sec:propertielist}
+
+We defined our metadata-properties in chapter \ref{sec:propertielist}. We added
+some metadata which are specific for our solution such as number of repositories
+and workflow version to make the files better compareable and get more date out
+of them. We also made a matedata-property repo-hosting service, because it is
+possible that we have to change from GitHub to another repo-hosting service in
+he future.
+
+
+\subsubsection{Table of our metadata records}\label{sec:metadatarecordtable}
+
+\begin{tabular}{ c | l}
+    \textbf{Metadata-property} & \textbf{Metadata-value} \\
+    \hline
+    title & GitHub Repositories \\
+    \hline
+    description & 1st 1000 repos returned by https://api.github.com/repositories  \\
+    \hline
+    subject & 1st 1000 GitHub repos \\
+    \hline
+    date created & 2015-06-06 \\
+    \hline
+     creator & Roman Decker \\
+    \hline
+     publisher & GitHub \\
+    \hline
+     format & JSON \\
+    \hline
+     size of file & 206.773 Byte \\
+    \hline
+     number of repositories & 1000 \\
+    \hline
+     rightsholder & GitHub \\
+    \hline
+     repo-hosting service & github.com \\
+    \hline
+     workflow version & 1 \\
+    \hline
+     identifier & dataset \\
+    \hline
+     language & english \\
+    \hline
+     provenace & GitHub \\
+    \hline
+\end{tabular}
