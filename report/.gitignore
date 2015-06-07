@@ -1,0 +1,14 @@
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+*.pdf
+*.synctex.gz
+*.bak
+*.fls
+*.fdb_latexmk
+*.tdo
+*.toc
+latex/
+JabRef-2.10.jar

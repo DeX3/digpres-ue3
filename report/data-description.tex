@@ -1,0 +1,19 @@
+\section{Dataset Description}\label{sec:dataset-description}
+
+This section explains the created dataset.
+
+\subsection{Export}\label{sec:export}
+
+Because we used MongoDB as our database, it is straightforward to select JSON as the
+format for our export. It is a nice, human-readable format that can be easily
+exported by tools such as \texttt{mongoexport}:
+
+\begin{lstlisting}
+$ mongoexport --db github \
+              --collection github-1433519125507 \
+              --jsonArray \
+              --out export.json
+connected to: 127.0.0.1
+exported 1000 records
+\end{lstlisting}
+
