@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metadata
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:dcterms="http://purl.org/dc/terms/">
+<dc:title>GitHub Repositories</dc:title>
+<dc:creator>Roman Decker</dc:creator>
+<dc:creator>Sebastian Störchle</dc:creator>
+<dc:subject>GitHub repositories</dc:subject>
+<dc:description>An export of the first 1000 repositories as returned by https://api.github.com/repositories. Not all properties are present however, some have been stripped.</dc:description>
+<dc:publisher>https://github.com</dc:publisher>
+<dcterms:created xsi:type="dcterms:W3CDTF">2015-06-06</dcterms:created>
+<dc:type xsi:type="dcterms:DCMIType">Dataset</dc:type>
+<dc:format>JSON</dc:format>
+<dc:identifier>Dataset</dc:identifier>
+<dc:source xsi:type="dcterms:URI">https://api.github.com/</dc:source>
+<dc:language xsi:type="dcterms:ISO639-3">eng</dc:language>
+<dc:relation xsi:type="dcterms:URI">https://api.github.com/repositories</dc:relation>
+<dc:coverage>1-1000 of returned repositories</dc:coverage>
+<dc:rights>GitHub.com</dc:rights>
+<dcterms:educationlevel>Educational</dcterms:educationlevel>
+<dcterms:provenance>GitHub.com</dcterms:provenance>
+<dcterms:rightsholder>GitHub.com</dcterms:rightsholder>
+<dcterms:instructionalmethod>Learning</dcterms:instructionalmethod>
+<dcterms:accrualmethod>Insert</dcterms:accrualmethod>
+<dcterms:accrualperiodicity>Irregular</dcterms:accrualperiodicity>
+<dcterms:accrualpolicy>Closed</dcterms:accrualpolicy>
+
+</metadata>
