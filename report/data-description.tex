@@ -19,19 +19,19 @@ exported 1000 records
 
 \subsection{Dublin Core}\label{sec:dublin}
 
-The idea from Dublin Core is the standardize the metadata for physical resources
-and web resources. In the Appendix we have a example for the Dublin Core Scheme
-for our solution. In our opinion it is a great scheme to compare dataset and get
-information but it is not really applicable for every dataset. Our dataset is
-one example, where we think it is not really applicable and where the scheme can
-not show their strenght, because the metadata for every dataset in the future is
-most likely the same except the date. 
+The idea of Dublin Core is to standardize the metadata for physical resources
+and web resources. Appendix \ref{sec:dc} shows an example for the Dublin Core
+Scheme for our solution. In our opinion it is a great scheme to compare datasets
+and get information but it is not really applicable for every dataset. Our
+dataset is one example, where we think it is not really applicable and where the
+scheme can not show its strength, because the metadata for every dataset in
+the future is most likely the same except the date. 
 
 \subsection{Preservation Metadata: Implementation Strategies (PREMIS)}\label{sec:premis}
-
+This section describes the PREMIS metadata format.
 
 \subsubsection{Most relevant metadata properties for our
-dataset}\label{sec:propertielist}
+dataset}\label{sec:propertylist}
 
 \paragraph{title}
 The title of the dataset.
@@ -42,7 +42,7 @@ The subject of the dataset.
 \paragraph{date created}
 The date when the dataset was created.
 \paragraph{creator}
-The person, who created the dataset.
+The person who created the dataset.
 \paragraph{publisher}
 The publihser of the dataset.
 \paragraph{format}
@@ -61,23 +61,24 @@ The workflow-version of the dataset.
 The identifier of the dataset.
 \paragraph{language}
 The language of the dataset.
-\paragraph{provenace}
-The provenace of the dataset.
+\paragraph{provenance}
+The provenance of the dataset.
 
 \subsubsection{Description and dissusion about metadata
 properties}\label{sec:descprop}
 
-We defined our metadata-properties in chapter \ref{sec:propertielist}. We added
+We defined our metadata-properties in section \ref{sec:propertylist}. We added
 some metadata which are specific for our solution such as number of repositories
-and workflow version to make the files better compareable and get more date out
-of them. We also made a matedata-property repo-hosting service, because it is
+and workflow version to make the files better comparable and get more date out
+of them. We also made a metadata-property repo-hosting service, because it is
 possible that we have to change from GitHub to another repo-hosting service in
 he future.
 
 
 \subsubsection{Table of our metadata records}\label{sec:metadatarecordtable}
 
-\begin{tabular}{ c | l}
+\begin{tabular}{|c|l|}
+    \hline
     \textbf{Metadata-property} & \textbf{Metadata-value} \\
     \hline
     title & GitHub Repositories \\

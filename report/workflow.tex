@@ -9,9 +9,8 @@ format.\\
 
 One thing to be noted is that GitHub limits requests from unauthenticated
 sources and executing the workflow results in a lot of requests to GitHub. This
-is why the it is recommended let the workflow authenticate with GitHub by
-providing a peronal access token which can be generated on any GitHub user's
-settings page.
+is why the workflow authenticates with GitHub by providing a peronal access
+token which can be generated on any GitHub user's settings page.
 
 \section{Description}\label{sec:description}
 
@@ -107,7 +106,7 @@ The recorded dataset represents a list of public GitHub repositories bundled
 with some of their meta-data. Listing \ref{lst:sample-record} shows a full
 sample record.
 
-\begin{lstlisting}[language=json,label=lst:sample-record]
+\begin{lstlisting}[language=json,caption=Sample record,label=lst:sample-record]
 {
     "_id" : ObjectId("5571c5a504457411a02210b3"),
     "languages" : {
@@ -175,48 +174,49 @@ The result of this Map-Reduce-operation looks as follows:
    ...
 \end{lstlisting}
 
-Subset description (how did you create a subset, sample query)
-
 \subsection{Storyline}\label{sec:storyline}
 
 Roman and Sebastian are developers for a big tech company. Both are very
 interested and fascinated by new technologies and programming-languages. One day
-they decided to make a own company, where they can play around with new
-technologies and programming-languages. They want to study the new trendy tech
-stuff and then teach other people, what the learned and what experiences they
-had made with that. The idea is, that they focus on study the trendy tech stuff,
-because most people are interested in that and so they can make more money.
-At the beginning, they looked at tech blogs to find what is important to learn
-but after a while they found a better solution for their problem: GitHub.
-Github is the most popular and successful hosting service for git repositories.
-With the Github-Api they can analyze how many repositories are in which
-programming-language and what programming-language is the most popular one.  
-They found a cool software called Taverna. With Taverna they ware able to
-build a automated workflow to call the API from Github and save the data in a
-MongoDB datastore. If they want to learn a new programming-language the can
-export the data from the MongoDB and analyze the data to find which
-programming-languages is worth to study next or in the future.  
+they decided to start their own company, where they can play around with new
+technologies and programming-languages.\\
+
+They want to study the new trendy tech stuff and then teach other people what
+the learned and what experiences they had made. The idea is, that they focus on
+studying the trendy tech stuff, because most people are interested in that and
+so they can make more money. At the beginning, they looked at tech blogs to find
+what is important to learn but after a while they found a better solution for
+their problem: GitHub. \\
+
+GitHub is the most popular and successful hosting service for git repositories.
+With the Github's public API they can analyze how many repositories use a given
+programming-language and what programming-languages are the most popular ones.\\
+
+They are able to use the Taverna workflow to analyze the repositories on
+GitHub. With Taverna they ware able to build a automated workflow to call the
+API from Github and save the data in a MongoDB datastore. If they want to learn
+a new programming-language the can export the data from the MongoDB and analyze
+the data to find which programming-languages is worth to study in the future.  
 
 \subsection{Sample subsets}\label{sec:sample-subsets}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\linewidth]{images/sample1.png}
+    \includegraphics[width=0.7\linewidth]{images/sample1.png}
     \caption{First subset sample}
     \label{fig:sample1}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\linewidth]{images/sample2-since-4601.png}
+    \includegraphics[width=0.7\linewidth]{images/sample2-since-4601.png}
     \caption{Second subset sample, repositories since 4601}
     \label{fig:sample2}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\linewidth]{images/sample3-since-9664.png}
+    \includegraphics[width=0.7\linewidth]{images/sample3-since-9664.png}
     \caption{Third subset sample, repositories since 9664}
     \label{fig:sample3}
 \end{figure}
-\todo{2 more samples}
